@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import { useMoralis } from "react-moralis"
+import Avatar from './Avatar';
 
 export default function Header() {
     const { user } = useMoralis();
@@ -18,7 +19,7 @@ export default function Header() {
                 </div>
                 <div className="text-left lg:text-center col-span-4">
                     <div className="h-48 w-48 relative lg:mx-auto border-pink-500 border-8 rounded-full">
-                        {/* <Avatar logoutOnPress /> */}
+                        <Avatar logoutOnPress />
                     </div>
                     <h1 className="text-3xl">Welcomet to THE Metaverse</h1>
                     <h2 className="text-5xl font-bold truncate">{user.getUsername()}</h2>
